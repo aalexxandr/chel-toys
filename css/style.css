@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+button {
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+body ul {
+  list-style: none;
+  margin: 0;
+}
+a:hover {
+  text-decoration: none !important;
+}
+.cl_main_text {
+  color: #0065ff;
+}
+.cl_main_text_hover {
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.cl_main_text_hover:hover {
+  color: #0065ff !important;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.cl_main_light_text_hover {
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.cl_main_light_text_hover:hover {
+  color: #3686ff !important;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.header_top_panel {
+  padding: 10px 0;
+}
+.header_top_panel .header_top_panel_slogan {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+}
+.header_top_panel .header_top_panel_phone_link {
+  text-decoration: none;
+  color: #000;
+}
+.header_top_panel .header_top_panel_phone_svg svg path {
+  stroke: #0065ff;
+}
+.header_top_panel .header_top_panel_phone_number {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 15px;
+  color: inherit;
+  margin-left: 3px;
+}
+.header_top_panel .header_top_panel_phone_request {
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0.07em;
+  margin-left: 9px;
+  height: 17px;
+}
+.header_top_panel .header_top_panel_menu {
+  margin: 0 -8px;
+}
+.header_top_panel .header_top_panel_menu li {
+  margin: 0 8px;
+}
+.header_top_panel .header_top_panel_menu li a {
+  font-family: 'Roboto';
+  font-size: 13px;
+  line-height: 14px;
+  color: #737373;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.header_top_panel .header_top_panel_menu li a:hover {
+  color: #ABABAB;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
