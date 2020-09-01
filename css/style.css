@@ -485,6 +485,15 @@ header .main-menu li a:hover {
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
+.preview_catalog .preview_catalog_item:first-child .preview_catalog_item_buy {
+  background: #0065ff;
+  color: #fff;
+}
+.preview_catalog .preview_catalog_item:first-child .preview_catalog_item_buy:hover {
+  background: #2287ff;
+  transition-property: background;
+  transition-duration: 0.4s;
+}
 .preview_catalog .preview_catalog_item {
   transition-property: box-shadow;
   transition-duration: 0.4s;
@@ -563,21 +572,231 @@ header .main-menu li a:hover {
   right: 0;
 }
 .preview_catalog .preview_catalog_item_buy {
-  background: #0065ff;
+  border: 1px solid #0065ff;
   font-weight: 600;
   font-size: 10px;
   line-height: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #0065ff;
   padding: 15px 20px;
   outline: none;
   pointer-events: auto;
-  transition-property: background;
+  transition-property: color background;
   transition-duration: 0.4s;
 }
 .preview_catalog .preview_catalog_item_buy:hover {
-  background: #2287ff;
-  transition-property: background;
+  background: #0065ff;
+  transition-property: color background;
   transition-duration: 0.4s;
+  color: #fff;
+}
+.preview_catalog .preview_catalog_all {
+  font-size: 16px;
+  display: inline-block !important;
+  margin-top: 40px;
+  font-weight: 500;
+  line-height: 1;
+  color: #0065ff;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.preview_catalog .preview_catalog_all:hover {
+  color: #2287ff !important;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.preview_catalog .preview_catalog_all svg {
+  margin-left: 6px;
+}
+.preview_catalog .preview_catalog_all svg path {
+  fill: #0065ff;
+  transition-property: fill;
+  transition-duration: 0.4s;
+}
+.preview_catalog .preview_catalog_all:hover svg {
+  animation: arrowRight 0.7s infinite alternate;
+  animation-fill-mode: both;
+}
+.preview_catalog .preview_catalog_all:hover svg path {
+  fill: #2287ff;
+  transition-property: fill;
+  transition-duration: 0.4s;
+}
+.about_company {
+  background: #FAFAFA;
+  padding: 150px 0;
+  margin-top: 50px;
+  font-family: 'Montserrat';
+  overflow: hidden;
+}
+.about_company .about_company_img {
+  position: relative;
+  width: 274px;
+  height: 330px;
+}
+.about_company .about_company_img img {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  z-index: 3;
+}
+.about_company .about_company_img svg {
+  position: absolute;
+}
+.about_company .about_company_img svg path {
+  fill: #0065ff;
+}
+@keyframes about_company_firstSvg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes about_company_secondSvg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes about_company_thirdSvg {
+  0% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.about_company .about_company_img .about_company_svg_first {
+  opacity: 14%;
+  width: 560px;
+  height: 504px;
+  z-index: 2;
+  animation: 60s linear infinite alternate firstSvg;
+}
+.about_company .about_company_img .about_company_svg_second {
+  opacity: 8%;
+  width: 580px;
+  height: 580px;
+  z-index: 1;
+  animation: 70s linear infinite alternate secondSvg;
+}
+.about_company .about_company_img .about_company_svg_third {
+  opacity: 4%;
+  width: 660px;
+  height: 543px;
+  animation: 100s linear infinite alternate thirdSvg;
+}
+.about_company .about_company_info {
+  width: 50%;
+}
+.about_company .about_company_title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 136.9%;
+  color: #666666;
+}
+.about_company .about_company_small_title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #181818;
+  margin-top: 14px;
+}
+.about_company .about_company_text {
+  font-size: 16px;
+  line-height: 150%;
+  color: #181818;
+  margin-top: 12px;
+}
+.about_company .about_company_link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 136.9%;
+  color: #0065FF;
+  margin-top: 25px;
+  color: #0065ff;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.about_company .about_company_link:hover {
+  color: #2287ff !important;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.about_company .about_company_link svg {
+  stroke: #0065ff;
+  margin-top: 2px;
+  margin-left: 6px;
+  transition-property: stroke;
+  transition-duration: 0.4s;
+}
+.about_company .about_company_link:hover svg {
+  stroke: #2287ff;
+  animation: arrowRight 0.7s infinite alternate;
+  transition-property: stroke;
+  transition-duration: 0.4s;
+}
+.questions {
+  font-family: 'Montserrat';
+  margin-top: 50px;
+}
+.questions .questions_item {
+  cursor: pointer;
+  border-bottom: 1px solid #D3D3D3;
+  padding: 40px 0;
+}
+.questions .questions_item:hover .questions_item_title {
+  color: #0065ff;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.questions .questions_item:hover svg path {
+  fill: #0065ff;
+  transition-property: fill;
+  transition-duration: 0.4s;
+}
+.questions .questions_item svg path {
+  transition-property: transform fill;
+  transition-duration: 0.4s;
+}
+.questions .questions_item:first-child {
+  border-top: 1px solid #D3D3D3;
+}
+.questions .questions_item.active_answer .questions_item_title {
+  color: #0065ff;
+}
+.questions .questions_item.active_answer svg {
+  transform: rotate(180deg);
+  transition-property: transform;
+  transition-duration: 0.4s;
+}
+.questions .questions_item.active_answer svg path {
+  stroke: #0065ff;
+}
+.questions .questions_title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 136.9%;
+  text-align: center;
+  color: #181818;
+  margin-bottom: 40px;
+}
+.questions .questions_item_title {
+  font-size: 20px;
+  line-height: 28px;
+  color: #181818;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.questions .questions_item_answer {
+  font-size: 16px;
+  line-height: 146.94%;
+  color: #444444;
+  margin-top: 30px;
+  display: none;
 }
