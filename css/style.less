@@ -175,8 +175,9 @@ header{
 .banner{
   font-family: @font_main;
   background: #FAFAFA;
-  padding: 50px 0;
+  padding: 100px 0;
   margin-top: 20px;
+  overflow: hidden;
   .banner_info_title{
     font-weight: 500;
     font-size: 42px;
@@ -227,6 +228,8 @@ header{
   }
   img{
     z-index: 3;
+    max-width: 100%;
+    max-height: 100%;
   }
   @keyframes firstSvg{
     0%{
@@ -272,10 +275,9 @@ header{
   }
   .consultation_items{
     margin-top: 50px;
-    margin: -20px -70px;
   }
   .consultation_item{
-    padding: 20px 70px;
+    width: 25%;
     .consultation_item_wrap:after{
       position: absolute;
     }
@@ -508,6 +510,9 @@ header{
       max-height: 100%;
     }
   }
+  .preview_catalog_item_tag_div{
+    margin: -10px;
+  }
   .preview_catalog_item_name{
     font-size: 16px;
     line-height: 18px;
@@ -519,6 +524,7 @@ header{
     font-size: 13px;
     line-height: 16px;
     text-decoration: dotted;
+    margin: 10px;
     svg{
       circle{
         fill:@color_main;
@@ -534,6 +540,7 @@ header{
     font-size: 13px;
     line-height: 16px;
     color: #808080;
+    margin: 10px;
   }
   .preview_catalog_item_price_val{
     font-weight: 600;
@@ -887,5 +894,183 @@ footer{
   .footer_right_copyright{
     color:#fff;
     margin-top: 65px;
+  }
+}
+@media screen and (max-width:1500px){
+  .about_company{
+    .about_company_img{
+      margin-left: 10%;
+      .about_company_svg_first{
+        width: 460px;
+        height: 404px;
+      }
+      .about_company_svg_second{
+        width: 480px;
+        height: 480px;
+      }
+      .about_company_svg_third{
+        width: 560px;
+        height: 443px;
+      }
+    }
+  }
+  footer{
+    .footer_left_bg{
+      svg{
+        margin-left: -100px;
+      }
+    }
+  }
+}
+@media screen and (max-width:1199px){
+  .header_top_panel_slogan{
+    display: none;
+  }
+  .banner{
+    .banner_info_title{
+      font-size: 38px;
+    }
+  }
+  .consultation{
+    .consultation_item{
+      width: 30%;
+    }
+  }
+  .preview_catalog{
+    .preview_catalog_item_img{
+      width: 190px;
+      height: 200px;
+    }
+  }
+  .about_company{
+    .about_company_img{
+      margin-left: 5%;
+      .about_company_svg_first{
+        width: 360px;
+        height: 304px;
+      }
+      .about_company_svg_second{
+        width: 380px;
+        height: 380px;
+      }
+      .about_company_svg_third{
+        width: 460px;
+        height: 343px;
+      }
+    }
+  }
+}
+@media screen and (max-width:1060px){
+  footer{
+    .footer_left_bg{
+      svg{
+        margin-left: -200px;
+      }
+    }
+  }
+}
+@media screen and (max-width:991px){
+  header{
+    .get_consultation_button{
+      margin-top: 15px;
+    }
+  }
+  .banner{
+    padding: 50px 0 120px 0;
+    .banner_info_link_div{
+      display: flex;
+      justify-content: center;
+    }
+    .banner_info_title{
+      font-size: 36px;
+      text-align: center;
+    }
+    .banner_info_text{
+      font-size: 18px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .banner_img{
+      width: 325px;
+      height: 240px;
+      margin: 0 auto;
+      margin-top: 75px;
+    }
+    .banner_img_first_svg,
+    .banner_img_second_svg,
+    .banner_img_third_svg{
+      top: -30px;bottom: -30px;left: -30px;right: -30px;
+    }
+  }
+  .consultation{
+    .consultation_items{
+      margin: -20px;
+    }
+    .consultation_item{
+      width: 44%;
+      margin: 20px;
+    }
+  }
+  .preview_catalog{
+    .preview_catalog_item:first-child{
+      .preview_catalog_item_info{
+        margin-top: 50%;
+      }
+    }
+    .preview_catalog_item_img{
+      margin: 0 auto;
+    }
+  }
+  .about_company{
+    padding: 50px 0;
+    .about_company_img{
+      margin: 0 auto;
+    }
+    .about_company_info{
+      width: 100%;
+    }
+  }
+  .questions{
+    .questions_item_title{
+      font-size: 18px;
+    }
+  }
+  footer{
+    .footer_left,
+    .footer_right{
+      width: 100%;
+    }
+    .footer_left{
+      position: relative;
+      overflow: hidden;
+      padding: 50px 0;
+    }
+    .footer_right_absolute,
+    .footer_left_absolute{
+      position: static;
+    }
+    .footer_left_bg{
+      position: absolute;
+      top: 5px;
+      svg{
+        margin-left: 0;
+      }
+    }
+    .footer_right_content_div{
+      justify-content: flex-start !important;
+    }
+    .footer_right_content{
+      width: 100%;
+      margin-bottom: 60px;
+    }
+  }
+}
+@media screen and (max-width:767px){
+  .consultation{
+    .consultation_item{
+      width: 80%;
+      margin: 0 auto;
+      margin: 20px 0;
+    }
   }
 }
