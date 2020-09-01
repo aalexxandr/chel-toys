@@ -628,7 +628,6 @@ header .main-menu li a:hover {
   padding: 150px 0;
   margin-top: 50px;
   font-family: 'Montserrat';
-  overflow: hidden;
 }
 .about_company .about_company_img {
   position: relative;
@@ -760,8 +759,12 @@ header .main-menu li a:hover {
   transition-property: fill;
   transition-duration: 0.4s;
 }
+.questions .questions_item svg {
+  transition-property: transform;
+  transition-duration: 0.4s;
+}
 .questions .questions_item svg path {
-  transition-property: transform fill;
+  transition-property: fill;
   transition-duration: 0.4s;
 }
 .questions .questions_item:first-child {
@@ -776,7 +779,9 @@ header .main-menu li a:hover {
   transition-duration: 0.4s;
 }
 .questions .questions_item.active_answer svg path {
-  stroke: #0065ff;
+  transition-property: fill;
+  transition-duration: 0.4s;
+  fill: #0065ff;
 }
 .questions .questions_title {
   font-weight: 500;
@@ -799,4 +804,99 @@ header .main-menu li a:hover {
   color: #444444;
   margin-top: 30px;
   display: none;
+}
+footer {
+  margin-top: 50px;
+  font-family: 'Montserrat';
+  position: relative;
+}
+footer .footer_left {
+  width: 40%;
+  background: #0065ff;
+}
+footer .footer_right {
+  width: 60%;
+  background: #181818;
+}
+footer .footer_left_absolute {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  top: 60px;
+}
+footer .footer_left_bg {
+  width: 100%;
+  position: relative;
+  opacity: 20%;
+}
+footer .footer_left_bg svg {
+  height: 400px;
+  display: block;
+  overflow: hidden;
+}
+footer .footer_left_title {
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+footer .footer_left_number,
+footer .footer_left_email {
+  margin-top: 40px;
+  display: block;
+}
+footer .footer_left_number a,
+footer .footer_left_email a {
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 41px;
+  letter-spacing: -0.4px;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 1;
+}
+footer .footer_left_email {
+  margin-top: 0;
+}
+footer .footer_social {
+  margin-top: 40px;
+}
+footer .footer_social_item a {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+footer a {
+  transition-property: opacity;
+  transition-duration: 0.4s;
+}
+footer a:hover {
+  opacity: 60%;
+  transition-property: opacity;
+  transition-duration: 0.4s;
+}
+footer .footer_right_absolute {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+footer .footer_right_logo {
+  display: inline-block;
+}
+footer .footer_right_content {
+  width: 55%;
+  margin-top: 60px;
+}
+footer .footer_right_menu_items {
+  margin: -10px -15px;
+  margin-top: 30px;
+}
+footer .footer_right_menu_item a {
+  padding: 10px 15px;
+  display: block;
+  color: #fff;
+}
+footer .footer_right_copyright {
+  color: #fff;
+  margin-top: 65px;
 }
