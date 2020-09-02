@@ -111,9 +111,6 @@ body h6 {
   transition-property: color;
   transition-duration: 0.4s;
 }
-.header_top_panel .header_top_panel_menu {
-  margin: 0 -8px;
-}
 .header_top_panel .header_top_panel_menu li {
   margin: 0 8px;
 }
@@ -168,6 +165,9 @@ header .main-menu li a:hover {
   color: #969696;
   transition-property: color;
   transition-duration: .4s;
+}
+header .phone_menu_button {
+  display: none;
 }
 .banner {
   font-family: 'Montserrat';
@@ -604,6 +604,8 @@ header .main-menu li a:hover {
   margin-top: 40px;
   font-weight: 500;
   line-height: 1;
+  position: relative;
+  z-index: 5;
   color: #0065ff;
   transition-property: color;
   transition-duration: 0.4s;
@@ -966,6 +968,9 @@ footer .footer_right_copyright {
   header .get_consultation_button {
     margin-top: 15px;
   }
+  header .header_top_panel_menu {
+    margin-left: -8px;
+  }
   .banner {
     padding: 50px 0 120px 0;
   }
@@ -1054,5 +1059,93 @@ footer .footer_right_copyright {
     width: 80%;
     margin: 0 auto;
     margin: 20px 0;
+  }
+  header {
+    position: relative;
+  }
+  header .main-menu {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  header .phone_main_menu_toggle,
+  header .header_top_panel_menu_toggle {
+    display: none;
+  }
+  header .phone_menu_button {
+    display: block;
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    top: 0;
+    padding: 25px 15px;
+    outline: none;
+    border: none;
+  }
+  header .phone_menu_button:hover,
+  header .phone_menu_button:active {
+    outline: none;
+    border: none;
+  }
+  header .phone_menu_button_icon {
+    width: 35px;
+    height: 2px;
+    background: #000;
+    transition-property: transform;
+    transition-duration: 0.3s;
+  }
+  header .phone_menu_button_icon::before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: #000;
+    position: relative;
+    bottom: 12px;
+    transition-property: transform, bottom;
+    transition-duration: 0.3s;
+  }
+  header .phone_menu_button_icon::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: #000;
+    position: relative;
+    bottom: -10px;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+  header .phone_menu_button_icon_div {
+    position: relative;
+  }
+  header .phone_menu_button_active .phone_menu_button_icon {
+    transform: rotate(45deg);
+    transition-property: transform;
+    transition-duration: 0.3s;
+  }
+  header .phone_menu_button_active .phone_menu_button_icon::before {
+    transform: rotate(-90deg);
+    bottom: 0;
+    transition-property: transform, bottom;
+    transition-duration: 0.3s;
+  }
+  header .phone_menu_button_active .phone_menu_button_icon::after {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+  header .main-menu li {
+    width: 100%;
+  }
+  header .main-menu li:first-child a {
+    border-top: 1px solid #E0E0E0;
+  }
+  header .main-menu li:last-child a {
+    border-right: none;
+  }
+  header .main-menu li a {
+    border-left: none;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 10px 0;
   }
 }

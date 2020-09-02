@@ -111,9 +111,6 @@ body{
     cursor: pointer;
     .cl_main_light_text_hover();
   }
-  .header_top_panel_menu{
-    margin: 0 -8px;
-  }
   .header_top_panel_menu li{
     margin: 0 8px;
   }
@@ -170,6 +167,9 @@ header{
         }
       }
     }
+  }
+  .phone_menu_button{
+    display: none;
   }
 }
 .banner{
@@ -591,6 +591,8 @@ header{
     margin-top: 40px;
     font-weight: 500;
     line-height: 1;
+    position: relative;
+    z-index: 5;
     .cl_main_text();
     .cl_main_light_text_hover();
     svg{
@@ -974,6 +976,9 @@ footer{
     .get_consultation_button{
       margin-top: 15px;
     }
+    .header_top_panel_menu{
+      margin-left: -8px;
+    }
   }
   .banner{
     padding: 50px 0 120px 0;
@@ -1071,6 +1076,102 @@ footer{
       width: 80%;
       margin: 0 auto;
       margin: 20px 0;
+    }
+  }
+  header{
+    position: relative;
+    .main-menu{
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
+    .phone_main_menu_toggle,
+    .header_top_panel_menu_toggle{
+      display: none;
+    }
+    .phone_menu_button{
+      display: block;
+      position: absolute;
+      z-index: 4;
+      right: 0;
+      top: 0;
+      padding: 25px 15px;
+      outline: none;
+      border: none;
+      &:hover,
+      &:active{
+        outline: none;
+        border: none;
+      }
+    }
+    .phone_menu_button_icon{
+      width: 35px;
+      height: 2px;
+      background: #000;
+      transition-property: transform;
+      transition-duration: 0.3s;
+      &::before{
+        content: '';
+        display: block;
+        width: 35px;
+        height: 2px;
+        background: #000;
+        position: relative;
+        bottom: 12px;
+        transition-property: transform, bottom;
+        transition-duration: 0.3s;
+      }
+      &::after{
+        content: '';
+        display: block;
+        width: 35px;
+        height: 2px;
+        background: #000;
+        position: relative;
+        bottom: -10px;
+        transition-property: opacity;
+        transition-duration: 0.3s;
+      }
+    }
+    .phone_menu_button_icon_div{
+      position: relative;
+    }
+    .phone_menu_button_active{
+      .phone_menu_button_icon{
+        transform: rotate(45deg);
+        transition-property: transform;
+        transition-duration: 0.3s;
+        &::before{
+          transform: rotate(-90deg);
+          bottom:0;
+          transition-property: transform, bottom;
+          transition-duration: 0.3s;
+        }
+        &::after{
+          opacity: 0;
+          transition-property: opacity;
+          transition-duration: 0.3s;
+        }
+      }
+    }
+    .main-menu{
+      li{
+        width: 100%;
+        &:first-child{
+          a{
+            border-top: 1px solid #E0E0E0;
+          }
+        }
+        &:last-child{
+          a{
+            border-right: none;
+          }
+        }
+        a{
+          border-left: none;
+          border-bottom: 1px solid #E0E0E0;
+          padding: 10px 0;
+        }
+      }
     }
   }
 }

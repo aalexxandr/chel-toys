@@ -8,4 +8,9 @@ $( document ).ready(function() {
     }
     answer.toggle(200);
   });
+  $('.phone_menu_button').on('click', function(){
+    $(this).toggleClass('phone_menu_button_active');
+    $('.header_top_panel_menu_toggle').toggle(200);
+    $('.phone_main_menu_toggle').toggle(200);
+  });
 });
